@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/static/css/form_styles.css">
+<div id="ticket_form">
+    {% if success %}
+        <div class="title">Thank you!</div>
+        <div class="text-normal margin-top">Your ticket was created. We will be in touch soon.</div>
+    {% else %}
+        <div class="text-normal">{{ feedback}}</div>
+    {% endif %}
+    <div class="margin-top margin-bottom">
+        <input type="button" onclick="location.href='/ask_question';" value="Start again">
+    </div>
+</div>

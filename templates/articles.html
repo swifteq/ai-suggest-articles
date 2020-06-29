@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/static/css/form_styles.css">
+<div id="ticket_form">
+    <div class="title">Query: {{ description }}</div>
+    <form action="contact_form" method="post">
+        <input type="hidden" name="description" value="{{ description }}"/>
+        <div class="text-normal margin-top">
+            {% if articles  %}
+                <p>We found some articles that might help:</p>
+                <ul >
+                    {% for article in articles %}
+                        <li class="text-normal margin-left">
+                            <a href="{{article['url']}}" target="_blank">
+                                {{article['title']}}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>
+                    We couldn't find any articles for your query.
+                    Please get in touch if you need help.
+                </p>
+            {% endif %}
+        </div>
+        <div class="margin-top-lg margin-left">
+            <input type="button" onclick="location.href='/ask_question';" value="Go back">
+            <input class="margin-left" type="submit" value="Contact support">
+        </div>
+    </form>
+
+</div>
