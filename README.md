@@ -1,5 +1,5 @@
 # Suggest KB articles with AI
-Smart contact form to deflect customer support tickets with Zendesk and Dialogflow API
+Smart contact form to deflect customer support tickets with [Zendesk and Dialogflow API](https://www.swifteq.com/post/ticket-deflection-customer-support-zendesk-dialogflow-ai)
 
 ## Setup
 
